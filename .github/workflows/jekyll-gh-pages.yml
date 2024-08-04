@@ -33,13 +33,13 @@ jobs:
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./home/adrian/Backend/backend/index.html
+          source: ./
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
   # Deployment job
-  deploy:
+  deploy:b
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
